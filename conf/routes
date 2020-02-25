@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET /cache/sync/get/:key                   controllers.CacheController.getSyncEntry(key)
+GET /cache/sync/set/:key/:value            controllers.CacheController.setSyncEntry(key, value)
+
+GET /cache/async/get/:key                  controllers.CacheController.getAsyncEntry(key)
+GET /cache/async/set/:key/:value           controllers.CacheController.setAsyncEntry(key, value)
+
+GET /cache/asyncCompletableFuture/get/:key controllers.CacheController.getFutureAsyncEntry(key)
+GET /cache/asyncBlocking/get/:key          controllers.CacheController.getBlockingAsyncEntry(key)
+
